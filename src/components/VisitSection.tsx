@@ -14,7 +14,7 @@ const VisitSection = () => {
   return (
     <motion.section
       id="visit-us"
-      className="bg-primary py-16 md:py-24 relative"
+      className="bg-primary py-16 md:py-24 relative scroll-mt-24 md:scroll-mt-28"
       initial="hidden"
       whileInView="visible"
       viewport={sectionViewport}

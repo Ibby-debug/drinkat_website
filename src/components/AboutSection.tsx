@@ -15,7 +15,7 @@ const AboutSection = () => {
   return (
     <motion.section
       id="about"
-      className="bg-background py-16 md:py-24 relative"
+      className="bg-background py-16 md:py-24 relative scroll-mt-24 md:scroll-mt-28"
       initial="hidden"
       whileInView="visible"
       viewport={sectionViewport}

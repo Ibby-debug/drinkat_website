@@ -6,8 +6,29 @@ import AboutSection from "@/components/AboutSection";
 import VisitSection from "@/components/VisitSection";
 import ContactFab from "@/components/ContactFab";
 import RetroFooter from "@/components/RetroFooter";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Index = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const raw = location.hash.replace(/^#/, "");
+    if (!raw) return;
+    const id = decodeURIComponent(raw);
+
+    const scrollToTarget = () => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      el.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+    };
+
+    scrollToTarget();
+    const t0 = window.setTimeout(scrollToTarget, 0);
+    return () => clearTimeout(t0);
+  }, [location.pathname, location.hash]);
+
   return (
     <div className="min-h-screen bg-background relative overflow-x-hidden">
       <RetroNav />

@@ -23,7 +23,10 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="home" className="bg-background min-h-[85vh] pt-24 md:pt-28 pb-12 md:pb-20 relative overflow-hidden -mt-24 flex flex-col justify-between">
+    <section
+      id="home"
+      className="bg-background min-h-[85vh] pt-24 md:pt-28 pb-12 md:pb-20 relative overflow-hidden -mt-24 flex flex-col justify-between scroll-mt-24 md:scroll-mt-28"
+    >
       {/* Background video – extends to very top of viewport on all views */}
       <div
         className="absolute left-0 right-0 bottom-0 z-0 pointer-events-none"
