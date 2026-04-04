@@ -25,7 +25,7 @@ const MenuPage = () => {
             <ArrowLeft className="w-4 h-4 shrink-0" aria-hidden />
             Back to home
           </Link>
-          <div className="rounded-3xl bg-white border border-border/60 shadow-sm px-4 py-8 md:px-8 md:py-12">
+          <div className="rounded-3xl bg-white shadow-sm px-4 py-8 md:px-8 md:py-12">
             <CategoryGrid categories={allCategories} />
           </div>
         </div>

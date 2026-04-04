@@ -36,7 +36,7 @@ const MenuCategoryPage = () => {
             </motion.div>
 
             <motion.h1
-              className="font-script text-3xl md:text-4xl text-primary mb-1"
+              className="font-script text-3xl md:text-4xl text-primary mb-1 text-center"
               variants={riseIn(reducedMotion, 16)}
             >
               {category.title}{" "}

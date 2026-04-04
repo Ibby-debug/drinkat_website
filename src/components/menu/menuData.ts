@@ -21,13 +21,53 @@ export const drinkCategories: Category[] = [
     id: "juices-cocktails",
     title: "Juices & Cocktails",
     titleAr: "عصائر وكوكتيل",
-    imageSrc: "/Menu_Items/Twittie.webp",
+    imageSrc: "/Menu_Items/Twittie.png",
     items: [
-      { name: "توتي (Tutti)", description: "Mixed fruit blend, bright and refreshing.", imageSrc: "/Menu_Items/Twittie.webp", prices: [{ label: "S", price: "2.00" }, { label: "M", price: "2.50" }] },
-      { name: "سوبر سلاور (Super Sour)", description: "Tangy sour smoothie for a bold kick.", imageSrc: "/Menu_Items/Sour Smoothie.webp", prices: [{ label: "S", price: "2.00" }, { label: "M", price: "2.50" }] },
-      { name: "فيتامين واو (Vitamin Wow)", description: "Fruit-packed boost to start your day.", imageSrc: "/Menu_Items/Vitamin W.webp", prices: [{ label: "S", price: "2.00" }, { label: "M", price: "2.50" }] },
-      { name: "جرين مكس (Green Mix)", description: "Green veggies and fruit in one glass.", imageSrc: "/Menu_Items/Green Mix.webp", prices: [{ label: "S", price: "1.50" }, { label: "M", price: "2.00" }] },
-      { name: "كابانا (Cabana)", description: "Tropical cabana-style juice.", imageSrc: "/Menu_Items/Kapana.webp", prices: [{ label: "S", price: "2.00" }, { label: "M", price: "2.50" }] },
+      {
+        name: "توتي (Tutti)",
+        description: "Lemon - Peach - Strawberry",
+        imageSrc: "/Menu_Items/Twittie.png",
+        prices: [
+          { label: "S", price: "2.00" },
+          { label: "M", price: "2.50" },
+        ],
+      },
+      {
+        name: "سوبر سلاور (Super Sour)",
+        description: "Kiwi - Lemon - Strawberry",
+        imageSrc: "/Menu_Items/Kiwi.png",
+        prices: [
+          { label: "S", price: "2.00" },
+          { label: "M", price: "2.50" },
+        ],
+      },
+      {
+        name: "فيتامين واو (Vitamin Wow)",
+        description: "Mango - Strawberry- Kiwi",
+        imageSrc: "/Menu_Items/VitaminWow.png",
+        prices: [
+          { label: "S", price: "2.00" },
+          { label: "M", price: "2.50" },
+        ],
+      },
+      {
+        name: "جرين مكس (Green Mix)",
+        description: "Lemon - Mint - Kiwi",
+        imageSrc: "/Menu_Items/GreenMix.png",
+        prices: [
+          { label: "S", price: "1.50" },
+          { label: "M", price: "2.00" },
+        ],
+      },
+      {
+        name: "كابانا (Cabana)",
+        description: "Mango and Passion Fruit",
+        imageSrc: "/Menu_Items/Orange.png",
+        prices: [
+          { label: "S", price: "2.00" },
+          { label: "M", price: "2.50" },
+        ],
+      },
       // { name: "كوكتيل درنكات (Cocktail Drinks)", imageSrc: "/Menu_Items/tutti.webp",prices: [{ label: "S", price: "1.75" }, { label: "M", price: "2.25" }] },
     ],
   },
@@ -35,19 +75,37 @@ export const drinkCategories: Category[] = [
     id: "mocktail-mojito",
     title: "Mocktail Mojito",
     titleAr: "موكتيل موهيتو",
-    imageSrc: "/Menu_Items/Sweetie Mojito Mocktail.webp",
+    imageSrc: "/Menu_Items/Sweetie.png",
     items: [
-      { name: "سويتي (Sweetie)", description: "Sweet mojito mocktail with mint and lime.", imageSrc: "/Menu_Items/Sweetie Mojito Mocktail.webp", prices: [{ label: "M", price: "2.00" }] },
-      { name: "سيامي (Siamy)", description: "Thai-inspired mocktail, crisp and aromatic.", imageSrc: "/Menu_Items/Siami.webp", prices: [{ label: "M", price: "2.00" }] },
+      {
+        name: "سويتي (Sweetie)",
+        description:
+          "A refreshing blend of mint, lime, and soda with a sweet tropical twist",
+        imageSrc: "/Menu_Items/Sweetie.png",
+        prices: [{ label: "M", price: "2.00" }],
+      },
+      {
+        name: "سيامي (Siamy)",
+        description:
+          "A zesty mojito infused with tangy Siami flavor for a bold taste",
+        imageSrc: "/Menu_Items/Siamy.png",
+        prices: [{ label: "M", price: "2.00" }],
+      },
     ],
   },
   {
     id: "matcha",
     title: "Matcha",
     titleAr: "ماتشا",
-    imageSrc: "/Menu_Items/Iced Matcha.webp",
+    imageSrc: "/Menu_Items/Matcha.png",
     items: [
-      { name: "ماتشا (Matcha)", description: "Smooth matcha whisked to a frothy finish.", imageSrc: "/Menu_Items/Iced Matcha.webp", prices: [{ label: "M", price: "2.50" }] },
+      {
+        name: "ماتشا (Matcha)",
+        description:
+          "Smooth and refreshing green tea matcha blended with cold milk and ice",
+        imageSrc: "/Menu_Items/Matcha.png",
+        prices: [{ label: "M", price: "2.50" }],
+      },
       // { name: "ماتشا فراولة (Strawberry Matcha)", imageSrc: "/Menu_Items/tutti.webp",prices: [{ label: "M", price: "3.00" }] },
       // { name: "ماتشا مانجا (Mango Matcha)", imageSrc: "/Menu_Items/tutti.webp",prices: [{ label: "M", price: "3.00" }] },
     ],
@@ -56,62 +114,276 @@ export const drinkCategories: Category[] = [
     id: "milkshake",
     title: "Milkshake",
     titleAr: "ميلك شيك",
-    imageSrc: "/Menu_Items/Cherazi Milkshake.webp",
+    imageSrc: "/Menu_Items/Shiraz.png",
     items: [
-      { name: "جوجل (Google)", description: "Rich, creamy signature milkshake.", imageSrc: "/Menu_Items/Google Milkshake.webp", prices: [{ label: "S", price: "2.50" }, { label: "M", price: "3.00" }] },
-      { name: "شيرازي (Shirazi)", description: "Indulgent Shirazi-style milkshake.", imageSrc: "/Menu_Items/Cherazi Milkshake.webp", prices: [{ label: "S", price: "2.75" }, { label: "M", price: "3.25" }] },
+      {
+        name: "جوجل (Google)",
+        description: "Mango and Coconut",
+        imageSrc: "/Menu_Items/GoogleMilkshake.png",
+        prices: [
+          { label: "S", price: "2.50" },
+          { label: "M", price: "3.00" },
+        ],
+      },
+      {
+        name: "شيرازي (Shirazi)",
+        description:
+          "A creamy, chilled milkshake infused with tropical flavor of cherazi fruit",
+        imageSrc: "/Menu_Items/Shiraz.png",
+        prices: [
+          { label: "S", price: "2.75" },
+          { label: "M", price: "3.25" },
+        ],
+      },
     ],
   },
   {
     id: "hot-drinks",
-    title: "Hot Drinks",
-    titleAr: "مشروبات ساخنة",
-    imageSrc: "/Menu_Items/Americano Coffee.webp",
+    title: "Hot Drinks & Lattes",
+    titleAr: "مشروبات ساخنة ولاتيه",
+    imageSrc: "/Menu_Items/Latte.png",
     items: [
-      { name: "ماتشا لاتيه (Matcha Latte)", description: "Steamed milk with ceremonial matcha.", imageSrc: "/Menu_Items/Matcha Latte.webp", prices: [{ label: "M", price: "2.50" }] },
-      { name: "سينمون لاتيه (Cinnamon Latte)", description: "Espresso with warm cinnamon and milk.", imageSrc: "/Menu_Items/Cinnabon Latte.webp", prices: [{ label: "M", price: "2.00" }] },
-      { name: "كابتشينو (Cappuccino)", description: "Espresso capped with velvety milk foam.", imageSrc: "/Menu_Items/Cinnabon Latte.webp", prices: [{ label: "M", price: "1.50" }] },
-      { name: "كافيه لاتيه (Café Latte)", description: "Classic espresso with silky steamed milk.", imageSrc: "/Menu_Items/Cafe Latte.webp", prices: [{ label: "M", price: "1.50" }] },
-      { name: "فلات وايت (Flat White)", description: "Bold espresso with microfoam milk.", imageSrc: "/Menu_Items/Flat White.webp", prices: [{ label: "M", price: "1.50" }] },
-      { name: "اسبرسو شوت (Espresso Shot)", description: "Single concentrated shot of espresso.", imageSrc: "/Menu_Items/Espresso Shot.webp", prices: [{ label: "M", price: "1.00" }] },
-      { name: "أمريكانو كوڤي (Americano)", description: "Espresso mellowed with hot water.", imageSrc: "/Menu_Items/Americano Coffee.webp", prices: [{ label: "M", price: "1.00" }] },
-      { name: "زنجبيل فريش (Fresh Ginger)", description: "Warming fresh ginger drink.", imageSrc: "/Menu_Items/Fresh Ginger.webp", prices: [{ label: "M", price: "0.65" }] },
-      { name: "لوتس لاتيه (Lotus Latte)", description: "Coffee with Lotus Biscoff sweetness.", imageSrc: "/Menu_Items/Lotus Latte.webp", prices: [{ label: "M", price: "2.00" }] },
-      { name: "موكا لاتيه (Mocha Latte)", description: "Chocolate and espresso in one cup.", imageSrc: "/Menu_Items/Mocha Latte.webp", prices: [{ label: "M", price: "2.00" }] },
-      { name: "بستاشيو لاتيه (Pistachio Latte)", description: "Nutty pistachio with steamed milk.", imageSrc: "/Menu_Items/Pistachio Latte.webp", prices: [{ label: "M", price: "2.00" }] },
-      { name: "سولتد كراميل لاتيه (Salted Caramel Latte)", description: "Sweet salted caramel with espresso.", imageSrc: "/Menu_Items/Salted Caramel Latte.webp", prices: [{ label: "M", price: "2.00" }] },
-      { name: "سبنش لاتيه (Spanish Latte)", description: "Condensed milk Spanish-style latte.", imageSrc: "/Menu_Items/Spanish Latte.webp", prices: [{ label: "M", price: "2.00" }] },
+      {
+        name: "ماتشا لاتيه (Matcha Latte)",
+        description: "Steamed milk with ceremonial matcha.",
+        imageSrc: "/Menu_Items/Latte.png",
+        prices: [{ label: "M", price: "2.50" }],
+      },
+      {
+        name: "سينمون لاتيه (Cinnamon Latte)",
+        description:
+          "A warm blend of cinnamon, espresso, and milk، like a cinnamon roll in a cup",
+        imageSrc: "/Menu_Items/Latte.png",
+        prices: [{ label: "M", price: "2.00" }],
+      },
+      {
+        name: "كابتشينو (Cappuccino)",
+        description: "Espresso capped with velvety milk foam.",
+        imageSrc: "/Menu_Items/Latte.png",
+        prices: [{ label: "M", price: "1.50" }],
+      },
+      {
+        name: "كافيه لاتيه (Café Latte)",
+        description: "Creamy steamed milk blended with smooth espresso",
+        imageSrc: "/Menu_Items/Latte.png",
+        prices: [{ label: "M", price: "1.50" }],
+      },
+      {
+        name: "فلات وايت (Flat White)",
+        description:
+          "Velvety steamed milk poured over a double shot of espresso",
+        imageSrc: "/Menu_Items/Latte.png",
+        prices: [{ label: "M", price: "1.50" }],
+      },
+      {
+        name: "اسبرسو شوت (Espresso Shot)",
+        description: "A bold, concentrated shot of pure coffee flavor",
+        imageSrc: "/Menu_Items/Espresso.png",
+        prices: [{ label: "M", price: "1.00" }],
+      },
+      {
+        name: "أمريكانو كوڤي (Americano)",
+        description: "Espresso diluted with hot water for a rich, smooth taste",
+        imageSrc: "/Menu_Items/Americano.png",
+        prices: [{ label: "M", price: "1.00" }],
+      },
+      {
+        name: "زنجبيل فريش (Fresh Ginger)",
+        description:
+          "Hot infusion of fresh ginger slices for a warming, spicy drink",
+        imageSrc: "/Menu_Items/Latte.png",
+        prices: [{ label: "M", price: "0.65" }],
+      },
+      {
+        name: "لوتس لاتيه (Lotus Latte)",
+        description:
+          "Espresso and milk infused with the sweet, spiced flavor of Lotus Biscoff",
+        imageSrc: "/Menu_Items/Latte.png",
+        prices: [{ label: "M", price: "2.00" }],
+      },
+      {
+        name: "موكا لاتيه (Mocha Latte)",
+        description: "Espresso mixed with chocolate syrup and steamed milk",
+        imageSrc: "/Menu_Items/Latte.png",
+        prices: [{ label: "M", price: "2.00" }],
+      },
+      {
+        name: "بستاشيو لاتيه (Pistachio Latte)",
+        description: "Nutty pistachio flavor blended with espresso and milk",
+        imageSrc: "/Menu_Items/Latte.png",
+        prices: [{ label: "M", price: "2.00" }],
+      },
+      {
+        name: "سولتد كراميل لاتيه (Salted Caramel Latte)",
+        description:
+          "Espresso with caramel syrup and a hint of sea salt, topped with steamed milk",
+        imageSrc: "/Menu_Items/Latte.png",
+        prices: [{ label: "M", price: "2.00" }],
+      },
+      {
+        name: "سبنش لاتيه (Spanish Latte)",
+        description:
+          "Sweetened espresso with steamed milk for a creamy, rich taste",
+        imageSrc: "/Menu_Items/Latte.png",
+        prices: [{ label: "M", price: "2.00" }],
+      },
+      {
+        name: "صحالاب بستاشيو ساخن كات بوكس (Sahalab Pistachio Hot Kat Box)",
+        description: "",
+        imageSrc: "/Menu_Items/SahalabPistachioHotKatBox.jpg",
+        prices: [
+          // { label: "M", price: "2.00" }
+        ],
+      },
+      {
+        name: "صحالاب ساخن كات بوكس (Sahalab Hot Kat Box)",
+        description: "",
+        imageSrc: "/Menu_Items/SahalabHotKatBox.jpg",
+        prices: [
+          // { label: "M", price: "2.00" }
+        ],
+      },
+      {
+        name: "صحالاب مارشميلو ساخن كات بوكس (Sahalab Marshmellow Hot Kat Box)",
+        description: "",
+        imageSrc: "/Menu_Items/SahalabMarshmellowHotKatBox.jpg",
+        prices: [
+          // { label: "M", price: "2.00" }
+        ],
+      },
     ],
   },
   {
     id: "fresh",
-    title: "Fresh",
-    titleAr: "فريش",
-    imageSrc: "/Menu_Items/Fresh Orange Juice.webp",
+    title: "Fresh Juices",
+    titleAr: "عصائر طازجة",
+    imageSrc: "/Menu_Items/FreshMangoJuice.png",
     items: [
-      { name: "مانجو (Mango)", description: "Fresh-pressed sweet mango juice.", imageSrc: "/Menu_Items/Fresh Mango Juice.webp", prices: [{ label: "S", price: "2.00" }, { label: "M", price: "2.50" }] },
+      {
+        name: "مانجو (Mango)",
+        description: "Fresh mango, sugar, water and blended",
+        imageSrc: "/Menu_Items/FreshMangoJuice.png",
+        prices: [
+          { label: "S", price: "2.00" },
+          { label: "M", price: "2.50" },
+        ],
+      },
       // { name: "رمان (Pomegranate)", imageSrc: "/Menu_Items/tutti.webp",prices: [{ label: "S", price: "2.00" }, { label: "M", price: "2.50" }] },
-      { name: "ليمون (Lemon)", description: "Bright fresh lemon juice.", imageSrc: "/Menu_Items/Fresh Lemon Juice.webp", prices: [{ label: "S", price: "1.50" }, { label: "M", price: "2.00" }] },
-      { name: "برتقال (Orange)", description: "Classic fresh orange juice.", imageSrc: "/Menu_Items/Fresh Orange Juice.webp", prices: [{ label: "S", price: "1.50" }, { label: "M", price: "2.00" }] },
+      {
+        name: "ليمون (Lemon)",
+        description: "Made with real lemons and a hint of sweetness",
+        imageSrc: "/Menu_Items/FreshLemonJuice.png",
+        prices: [
+          { label: "S", price: "1.50" },
+          { label: "M", price: "2.00" },
+        ],
+      },
+      {
+        name: "برتقال (Orange)",
+        description:
+          "Freshly squeezed orange juice, naturally sweet and full of vitamin C",
+        imageSrc: "/Menu_Items/FreshOrangeJuice.png",
+        prices: [
+          { label: "S", price: "1.50" },
+          { label: "M", price: "2.00" },
+        ],
+      },
       // { name: "جريب فروت (Grapefruit)", imageSrc: "/Menu_Items/tutti.webp",prices: [{ label: "S", price: "1.75" }, { label: "M", price: "2.25" }] },
-      { name: "فراولة (Strawberry)", description: "Sweet fresh strawberry juice.", imageSrc: "/Menu_Items/Fresh Strawberry Juice.webp", prices: [{ label: "S", price: "1.75" }, { label: "M", price: "2.25" }] },
+      {
+        name: "فراولة (Strawberry)",
+        description: "Strawberry, water, sugar, and ice",
+        imageSrc: "/Menu_Items/FreshStrawberryJuice.png",
+        prices: [
+          { label: "S", price: "1.75" },
+          { label: "M", price: "2.25" },
+        ],
+      },
     ],
   },
   {
     id: "iced-coffee",
     title: "Iced Coffee & Lattes",
     titleAr: "قهوة باردة",
-    imageSrc: "/Menu_Items/Iced Americano.webp",
+    imageSrc: "/Menu_Items/IcedAmericano.png",
     items: [
-      { name: "ايس أمريكانو (Iced Americano)", description: "Cold espresso with water over ice.", imageSrc: "/Menu_Items/Iced Americano.webp", prices: [{ label: "S", price: "1.00" }, { label: "M", price: "1.50" }] },
-      { name: "ايس لاتيه (Iced Latte)", description: "Chilled latte, smooth and refreshing.", imageSrc: "/Menu_Items/Iced Latte.webp", prices: [{ label: "S", price: "1.50" }, { label: "M", price: "2.00" }] },
-      { name: "ايس سبنش لاتيه (Iced Spanish Latte)", description: "Iced Spanish latte with condensed milk.", imageSrc: "/Menu_Items/Iced Spanish Latte.webp", prices: [{ label: "S", price: "2.00" }, { label: "M", price: "2.50" }] },
-      { name: "ايس سولتد كراميل (Iced Salted Caramel)", description: "Salted caramel cold coffee treat.", imageSrc: "/Menu_Items/Iced Salted Caramel.webp", prices: [{ label: "S", price: "2.00" }, { label: "M", price: "2.50" }] },
-      { name: "ايس بستاشيو (Iced Pistachio)", description: "Nutty pistachio over ice.", imageSrc: "/Menu_Items/Iced Pistachio.webp", prices: [{ label: "S", price: "2.00" }, { label: "M", price: "2.50" }] },
-      { name: "ايس سينمون لاتيه (Iced Cinnamon Latte)", description: "Iced latte with cinnamon spice.", imageSrc: "/Menu_Items/Iced Cinnabon Latte.webp", prices: [{ label: "S", price: "2.00" }, { label: "M", price: "2.50" }] },
-      { name: "لوتس لاتيه (Lotus Latte)", description: "Chilled Lotus Biscoff latte.", imageSrc: "/Menu_Items/Lotus Latte.webp", prices: [{ label: "S", price: "2.00" }, { label: "M", price: "2.50" }] },
-      { name: "ايس موكا (Iced Mocha)", description: "Iced chocolate and coffee blend.", imageSrc: "/Menu_Items/Iced Mocha.webp", prices: [{ label: "S", price: "2.00" }, { label: "M", price: "2.50" }] },
-      { name: "ايس بينك لاتيه (Iced Pink Latte)", description: "Pretty pink iced latte.", imageSrc: "/Menu_Items/Iced Pink Latte.webp", prices: [{ label: "S", price: "2.00" }, { label: "M", price: "2.50" }] },
+      {
+        name: "ايس أمريكانو (Iced Americano)",
+        description:
+          "Bold espresso poured over cold water and ice for a crisp, smooth taste",
+        imageSrc: "/Menu_Items/IcedAmericano.png",
+        prices: [
+          { label: "S", price: "1.00" },
+          { label: "M", price: "1.50" },
+        ],
+      },
+      {
+        name: "ايس لاتيه (Iced Latte)",
+        description:
+          "Chilled espresso mixed with cold milk and ice for a refreshing coffee drink",
+        imageSrc: "/Menu_Items/IcedLatte.png",
+        prices: [
+          { label: "S", price: "1.50" },
+          { label: "M", price: "2.00" },
+        ],
+      },
+      {
+        name: "ايس سبنش لاتيه (Iced Spanish Latte)",
+        description:
+          "Sweetened espresso with cold milk and ice, rich and refreshing",
+        imageSrc: "/Menu_Items/IcedLatte.png",
+        prices: [
+          { label: "S", price: "2.00" },
+          { label: "M", price: "2.50" },
+        ],
+      },
+      {
+        name: "ايس سولتد كراميل (Iced Salted Caramel)",
+        description:
+          "Espresso and milk blended with caramel and a touch of sea salt, served over ice",
+        imageSrc: "/Menu_Items/IcedSaltedCaramel.png",
+        prices: [
+          { label: "S", price: "2.00" },
+          { label: "M", price: "2.50" },
+        ],
+      },
+      {
+        name: "ايس بستاشيو (Iced Pistachio)",
+        description:
+          "Creamy pistachio flavor with cold milk and espresso over ice",
+        imageSrc: "/Menu_Items/IcedLattePistachio.png",
+        prices: [
+          { label: "S", price: "2.00" },
+          { label: "M", price: "2.50" },
+        ],
+      },
+      {
+        name: "ايس سينمون لاتيه (Iced Cinnamon Latte)",
+        description:
+          "Chilled cinnamon-spiced latte with a smooth, sweet finish",
+        imageSrc: "/Menu_Items/IcedLatte.png",
+        prices: [
+          { label: "S", price: "2.00" },
+          { label: "M", price: "2.50" },
+        ],
+      },
+      {
+        name: "ايس موكا (Iced Mocha)",
+        description: "Espresso, chocolate, and milk served cold over ice",
+        imageSrc: "/Menu_Items/IcedMocha.png",
+        prices: [
+          { label: "S", price: "2.00" },
+          { label: "M", price: "2.50" },
+        ],
+      },
+      {
+        name: "ايس بينك لاتيه (Iced Pink Latte)",
+        description: "A colorful, creamy iced latte with a hint of berry",
+        imageSrc: "/Menu_Items/IcedPinkLatte.png",
+        prices: [
+          { label: "S", price: "2.00" },
+          { label: "M", price: "2.50" },
+        ],
+      },
     ],
   },
 ];
@@ -121,10 +393,38 @@ export const foodCategories: Category[] = [
     id: "burgers",
     title: "Burgers",
     titleAr: "برغر",
-    imageSrc: "/Menu_Items/Double Burger.webp",
+    imageSrc: "/Menu_Items/TripleBurgerMeal.png",
     items: [
-      { name: "Double Burger", description: "Two juicy patties with fresh toppings.", imageSrc: "/Menu_Items/Double Burger.webp", prices: [{ label: "سناك", price: "3.00" }, { label: "وجبة", price: "4.50" }] },
-      { name: "Single Burger", description: "Classic single patty, fully loaded.", imageSrc: "/Menu_Items/Single Burger.webp", prices: [{ label: "سناك", price: "2.00" }, { label: "وجبة", price: "3.40" }] },
+      {
+        name: "Triple Burger",
+        description:
+          "Three juicy beef patties stacked high with melted cheese and fresh toppings on a toasted bun bread - the ultimate burger experience for hearty appetites",
+        imageSrc: "/Menu_Items/TripleBurger.png",
+        prices: [
+          { label: "سناك", price: "3.00" },
+          { label: "وجبة", price: "6.50" },
+        ],
+      },
+      {
+        name: "Double Burger",
+        description:
+          "Two Delicious juicy tender beef patties stacked with fresh lettuce tomato and our special sauce on a toasted burger bun bread Served",
+        imageSrc: "/Menu_Items/DoubleBurger.png",
+        prices: [
+          { label: "سناك", price: "3.00" },
+          { label: "وجبة", price: "4.50" },
+        ],
+      },
+      {
+        name: "Single Burger",
+        description:
+          "A classic burger featuring a delicious classic juicy beef patty grilled to perfection topped with fresh lettuce and tomato on a soft toasted bun bread- simple and delicious",
+        imageSrc: "/Menu_Items/SingleBurger.png",
+        prices: [
+          { label: "سناك", price: "2.00" },
+          { label: "وجبة", price: "4.75" },
+        ],
+      },
     ],
   },
   // {
@@ -141,10 +441,22 @@ export const foodCategories: Category[] = [
     id: "fries",
     title: "Fries",
     titleAr: "بطاطا",
-    imageSrc: "/Menu_Items/Fries.webp",
+    imageSrc: "/Menu_Items/Fries.png",
     items: [
       // { name: "Dynamite Fries", imageSrc: "/Menu_Items/tutti.webp", prices: [{ label: "", price: "2.50" }] },
-      { name: "French Fries", description: "Crispy golden fries, salted to perfection.", imageSrc: "/Menu_Items/Fries.webp", prices: [{ label: "", price: "1.00" }] },
+      {
+        name: "French Fries",
+        description: "Crispy golden potato fries, lightly salted",
+        imageSrc: "/Menu_Items/Fries.png",
+        prices: [{ label: "", price: "1.00" }],
+      },
+      {
+        name: "Fried Potatoes With Minced Meat",
+        description:
+          "Crispy golden fries topped with savory seasoned minced beef and our special house sauce - a perfect companion to any burger",
+        imageSrc: "/Menu_Items/FriesWithMeat.png",
+        prices: [{ label: "", price: "1.00" }],
+      },
     ],
   },
 ];
@@ -168,9 +480,19 @@ export const sidesCategory: Category = {
   title: "Sides",
   titleAr: "أشياء سوفت",
   imageSrc: "/Menu_Items/Soft Drink.webp",
-    items: [
-    { name: "Iced Tea", description: "Chilled iced tea.", imageSrc: "/Menu_Items/Iced Tea.webp", prices: [{ label: "", price: "1.50" }] },
-    { name: "Soft Drink", description: "Cold soft drink.", imageSrc: "/Menu_Items/Soft Drink.webp", prices: [{ label: "", price: "0.35" }] },
+  items: [
+    {
+      name: "Iced Tea",
+      description: "Chilled iced tea.",
+      imageSrc: "/Menu_Items/Iced Tea.webp",
+      prices: [{ label: "", price: "1.50" }],
+    },
+    {
+      name: "Soft Drink",
+      description: "Cold soft drink.",
+      imageSrc: "/Menu_Items/Soft Drink.webp",
+      prices: [{ label: "", price: "0.35" }],
+    },
     // { name: "Cookies", imageSrc: "/Menu_Items/tutti.webp", prices: [{ label: "", price: "1.00" }] },
   ],
 };
@@ -187,7 +509,9 @@ export const allCategories: Category[] = [
   // sidesCategory,
 ];
 
-const categoryById = new Map<string, Category>(allCategories.map((c) => [c.id, c]));
+const categoryById = new Map<string, Category>(
+  allCategories.map((c) => [c.id, c]),
+);
 
 export function getCategoryById(id: string): Category | undefined {
   return categoryById.get(id);
@@ -205,15 +529,3 @@ export const tabs = [
 ] as const;
 
 export type TabId = (typeof tabs)[number]["id"];
-
-/** Featured items for the auto-rotating conveyor (name, prices, optional label, image slug for matching photo) */
-export type FeaturedItem = MenuItem & { label?: string; imageSlug?: string };
-export const featuredItems: FeaturedItem[] = [
-  { name: "ماتشا لاتيه (Matcha Latte)", description: "Steamed milk with ceremonial matcha.", imageSrc: "/Menu_Items/tutti.webp", prices: [{ label: "M", price: "2.50" }], label: "Hot Drinks", imageSlug: "matcha-latte" },
-  { name: "كابتشينو (Cappuccino)", description: "Espresso capped with velvety milk foam.", imageSrc: "/Menu_Items/tutti.webp", prices: [{ label: "M", price: "1.50" }], label: "Hot Drinks", imageSlug: "cappuccino" },
-  { name: "ماتشا فراولة (Strawberry Matcha)", description: "Strawberry and matcha fusion.", imageSrc: "/Menu_Items/tutti.webp", prices: [{ label: "M", price: "3.00" }], label: "Matcha", imageSlug: "strawberry-matcha" },
-  { name: "Double Burger", description: "Two juicy patties with fresh toppings.", imageSrc: "/Menu_Items/tutti.webp", prices: [{ label: "وجبة", price: "4.50" }], label: "Burgers", imageSlug: "burger" },
-  { name: "ايس سبنش لاتيه (Iced Spanish Latte)", description: "Iced Spanish latte with condensed milk.", imageSrc: "/Menu_Items/tutti.webp", prices: [{ label: "M", price: "2.50" }], label: "Iced Coffee", imageSlug: "iced-coffee" },
-  { name: "مانجو (Mango)", description: "Fresh-pressed sweet mango juice.", imageSrc: "/Menu_Items/tutti.webp", prices: [{ label: "M", price: "2.50" }], label: "Fresh", imageSlug: "mango" },
-  { name: "موكتيل موهيتو · سويتي", description: "Sweet mojito mocktail with mint and lime.", imageSrc: "/Menu_Items/tutti.webp", prices: [{ label: "M", price: "2.00" }], label: "Mocktail", imageSlug: "mocktail" },
-];

@@ -1,5 +1,6 @@
 import { CupSoda } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { motion, useReducedMotion } from "framer-motion";
+import { playfulHoverTap } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 import type { MenuItem } from "./menuData";
 import { PriceBadges } from "./PriceBadges";
@@ -10,16 +11,15 @@ type MenuProductCardProps = {
 };
 
 export function MenuProductCard({ item, className }: MenuProductCardProps) {
+  const reducedMotion = useReducedMotion();
   const isArabicHeavy = /[\u0600-\u06FF]/.test(item.name);
 
   return (
-    <Card
-      className={cn(
-        "overflow-hidden border-border/80 bg-card shadow-sm transition-shadow hover:shadow-md h-full flex flex-col",
-        className,
-      )}
+    <motion.article
+      className={cn("flex flex-col h-full ", className)}
+      {...playfulHoverTap(reducedMotion)}
     >
-      <div className="relative aspect-[4/3] overflow-hidden bg-muted/70 border-b border-border/60 flex items-center justify-center">
+      <div className="relative aspect-[1/1] overflow-hidden rounded-xl flex items-center justify-center ">
         {item.imageSrc ? (
           <img
             src={item.imageSrc}
@@ -32,7 +32,7 @@ export function MenuProductCard({ item, className }: MenuProductCardProps) {
           </div>
         )}
       </div>
-      <CardContent className="p-4 flex flex-col flex-1 gap-3">
+      <div className="flex flex-col flex-1 gap-3 px-0.5">
         <h2
           className={cn(
             "font-semibold text-primary text-sm leading-snug line-clamp-3 min-h-[2.75rem]",
@@ -44,10 +44,10 @@ export function MenuProductCard({ item, className }: MenuProductCardProps) {
         <p className="text-muted-foreground text-xs leading-relaxed line-clamp-3 font-rounded">
           {item.description}
         </p>
-        <div className="mt-auto pt-1 border-t border-border/60">
+        <div className="mt-auto pt-1">
           <PriceBadges item={item} variant="onCard" />
         </div>
-      </CardContent>
-    </Card>
+      </div>
+    </motion.article>
   );
 }

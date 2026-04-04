@@ -14,22 +14,25 @@ import {
   sectionStagger,
   sectionViewport,
 } from "@/lib/motion";
-import { allCategories, featuredItems, type FeaturedItem } from "./menu/menuData";
+import { allCategories } from "./menu/menuData";
 import { CategoryGrid } from "./menu/CategoryGrid";
 
 const FEATURED_INTERVAL_MS = 2500;
 
 /** Local featured photos from public folder (cycle through 4 images for 7 items) */
-const FEATURED_IMAGE_NAMES = ["featured-item1.jpeg", "featured-item2.jpeg", "featured-item3.jpeg", "featured-item4.jpeg"];
-function getFeaturedImageUrl(_item: FeaturedItem, index: number): string {
-  const name = FEATURED_IMAGE_NAMES[index % FEATURED_IMAGE_NAMES.length];
-  return `/${name}`;
-}
+const FEATURED_IMAGE_NAMES = [
+  "/FeaturedItems/Featured1.jpg",
+  "/FeaturedItems/Featured5.jpg",
+  "/FeaturedItems/Featured6.jpg",
+  "/FeaturedItems/Featured2.jpg",
+  "/FeaturedItems/Featured3.jpg",
+  "/FeaturedItems/Featured4.jpg",
+];
 
 function FeaturedCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [swiper, setSwiper] = useState<SwiperInstance | null>(null);
-  const total = featuredItems.length;
+  const total = FEATURED_IMAGE_NAMES.length;
   const reducedMotion = useReducedMotion();
 
   return (
@@ -40,7 +43,10 @@ function FeaturedCarousel() {
       viewport={sectionViewport}
       variants={sectionStagger(reducedMotion)}
     >
-      <motion.p className="font-rounded font-semibold text-primary-foreground/80 text-xs uppercase tracking-widest text-center mb-3" variants={riseIn(reducedMotion, 14)}>
+      <motion.p
+        className="font-rounded font-semibold text-primary-foreground/80 text-xs uppercase tracking-widest text-center mb-3"
+        variants={riseIn(reducedMotion, 14)}
+      >
         Featured
       </motion.p>
       <Swiper
@@ -62,14 +68,14 @@ function FeaturedCarousel() {
         }
         className="overflow-hidden rounded-2xl"
       >
-        {featuredItems.map((item, index) => (
-          <SwiperSlide key={item.name}>
+        {FEATURED_IMAGE_NAMES.map((src) => (
+          <SwiperSlide key={src}>
             <motion.div
-              className="w-full rounded-2xl overflow-hidden bg-primary-foreground/10 border border-primary-foreground/20 aspect-[4/3]"
+              className="w-full rounded-2xl overflow-hidden bg-primary-foreground/10 aspect-[1/1]"
               variants={scaleIn(reducedMotion)}
             >
               <img
-                src={getFeaturedImageUrl(item, index)}
+                src={src}
                 alt=""
                 className="h-full w-full object-cover object-center"
               />
@@ -78,8 +84,11 @@ function FeaturedCarousel() {
         ))}
       </Swiper>
       {total > 1 && (
-        <motion.div className="flex justify-center gap-2 mt-3" variants={riseIn(reducedMotion, 10)}>
-          {featuredItems.map((_, i) => (
+        <motion.div
+          className="flex justify-center gap-2 mt-3"
+          variants={riseIn(reducedMotion, 10)}
+        >
+          {FEATURED_IMAGE_NAMES.map((_, i) => (
             <motion.button
               key={i}
               onClick={() => swiper?.slideToLoop(i)}
@@ -121,36 +130,59 @@ const MenuSection = () => {
         }}
       />
       <div className="absolute top-0 left-0 -translate-x-1/3 sm:-translate-x-1/4 md:-translate-x-1/6 pointer-events-none z-[1]">
-        <img src={palmTree} alt="" className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] w-auto opacity-50 md:opacity-60 animate-sway-wind drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)] [filter:brightness(0)_invert(1)]" />
+        <img
+          src={palmTree}
+          alt=""
+          className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] w-auto opacity-50 md:opacity-60 animate-sway-wind drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)] [filter:brightness(0)_invert(1)]"
+        />
       </div>
       <div className="absolute top-0 right-0 translate-x-1/3 sm:translate-x-1/4 md:translate-x-1/6 pointer-events-none z-[1] -scale-x-100">
-        <img src={palmTree} alt="" className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] w-auto opacity-50 md:opacity-60 animate-sway-wind-slow drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)] [filter:brightness(0)_invert(1)]" />
+        <img
+          src={palmTree}
+          alt=""
+          className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] w-auto opacity-50 md:opacity-60 animate-sway-wind-slow drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)] [filter:brightness(0)_invert(1)]"
+        />
       </div>
       <WarpedCheckerboard invert />
       <div className="container mx-auto px-6 relative z-10">
-        <motion.div className="text-center mb-8" variants={riseIn(reducedMotion, 20)}>
-          <motion.h2 className="font-script text-4xl md:text-6xl !text-primary-foreground mb-3" {...playfulHoverTap(reducedMotion)}>
+        <motion.div
+          className="text-center mb-8"
+          variants={riseIn(reducedMotion, 20)}
+        >
+          <motion.h2
+            className="font-script text-4xl md:text-6xl !text-primary-foreground mb-3"
+            {...playfulHoverTap(reducedMotion)}
+          >
             Menu Drinkat
           </motion.h2>
-          <motion.p className="font-rounded font-semibold text-primary-foreground/80 uppercase tracking-[0.2em] text-sm" variants={riseIn(reducedMotion, 14)}>
+          <motion.p
+            className="font-rounded font-semibold text-primary-foreground/80 uppercase tracking-[0.2em] text-sm"
+            variants={riseIn(reducedMotion, 14)}
+          >
             Made fresh, served with a smile
           </motion.p>
         </motion.div>
 
         <FeaturedCarousel />
 
-        <motion.h3 className="font-rounded font-bold text-primary-foreground/90 text-sm uppercase tracking-widest text-center mb-6" variants={riseIn(reducedMotion, 16)}>
+        <motion.h3
+          className="font-rounded font-bold text-primary-foreground/90 text-sm uppercase tracking-widest text-center mb-6"
+          variants={riseIn(reducedMotion, 16)}
+        >
           Browse by category
         </motion.h3>
 
         <motion.div
-          className="rounded-3xl bg-white/95 border border-white/40 shadow-lg px-4 py-8 md:px-8 md:py-10 max-w-6xl mx-auto"
+          className="rounded-3xl bg-white/95 shadow-lg px-4 py-8 md:px-8 md:py-10 max-w-6xl mx-auto"
           variants={riseIn(reducedMotion, 12)}
         >
           <CategoryGrid categories={allCategories} embedded />
         </motion.div>
 
-        <motion.p className="text-center mt-8" variants={riseIn(reducedMotion, 12)}>
+        <motion.p
+          className="text-center mt-8"
+          variants={riseIn(reducedMotion, 12)}
+        >
           <Link
             to="/menu"
             className="font-rounded font-semibold text-primary-foreground/90 text-sm uppercase tracking-widest underline underline-offset-4 hover:text-primary-foreground transition-colors"

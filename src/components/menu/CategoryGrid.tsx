@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import { ImageOff } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
-import { playfulHoverTap, riseIn, sectionStagger, sectionViewport } from "@/lib/motion";
+import {
+  playfulHoverTap,
+  riseIn,
+  sectionStagger,
+  sectionViewport,
+} from "@/lib/motion";
 import type { Category } from "./menuData";
 import { cn } from "@/lib/utils";
 
@@ -12,7 +17,11 @@ type CategoryGridProps = {
   embedded?: boolean;
 };
 
-export function CategoryGrid({ categories, className, embedded = false }: CategoryGridProps) {
+export function CategoryGrid({
+  categories,
+  className,
+  embedded = false,
+}: CategoryGridProps) {
   const reducedMotion = useReducedMotion();
 
   return (
@@ -42,17 +51,21 @@ export function CategoryGrid({ categories, className, embedded = false }: Catego
           >
             <div
               className={cn(
-                "relative aspect-square rounded-2xl border overflow-hidden flex items-center justify-center transition-all duration-300",
-                "bg-muted/80 border-border/60",
-                "group-hover:shadow-lg group-hover:-translate-y-1",
-                embedded && "bg-white/95 border-white/40 shadow-sm",
+                "relative aspect-square rounded-2xl overflow-hidden flex items-center justify-center",
+                "[perspective:900px]",
+                embedded && "shadow-sm",
               )}
             >
               {cat.imageSrc ? (
                 <img
                   src={cat.imageSrc}
                   alt=""
-                  className="max-h-[85%] max-w-[85%] object-contain object-center"
+                  className={cn(
+                    "max-h-[85%] max-w-[85%] object-contain object-center",
+                    "transform-gpu will-change-transform transition-[transform,filter] duration-300 ease-out",
+                    "group-hover:[transform:translate3d(0,-0.5rem,1.25rem)_scale(1.1)]",
+                    "group-hover:drop-shadow-xl",
+                  )}
                 />
               ) : (
                 <div className="flex flex-col items-center justify-center gap-2 text-muted-foreground p-4">
