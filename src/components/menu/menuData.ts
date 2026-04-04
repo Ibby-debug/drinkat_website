@@ -21,12 +21,12 @@ export const drinkCategories: Category[] = [
     id: "juices-cocktails",
     title: "Juices & Cocktails",
     titleAr: "عصائر وكوكتيل",
-    imageSrc: "/Menu_Items/Twittie.png",
+    imageSrc: "/Menu_Items/VitaminWow.png",
     items: [
       {
         name: "توتي (Tutti)",
         description: "Lemon - Peach - Strawberry",
-        imageSrc: "/Menu_Items/Twittie.png",
+        imageSrc: "/Menu_Items/VitaminWow.png",
         prices: [
           { label: "S", price: "2.00" },
           { label: "M", price: "2.50" },
